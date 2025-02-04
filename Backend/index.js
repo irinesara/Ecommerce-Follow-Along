@@ -1,6 +1,7 @@
 const express=require('express');
 const connectDB = require('./src/Database/db');
 const userrouter = require('./src/Controller/user');
+const { get } = require('mongoose');
 
 const app=express();
 
@@ -26,4 +27,10 @@ app.listen(PORT,async()=>{
     catch(err){
         console.log(err);
     }
+});
+app.use('/auth', userrouter)
+app.use('/product', productrouter)
+
+app.get('/', (req,res)=>{
+    res.send('Product router');
 });
