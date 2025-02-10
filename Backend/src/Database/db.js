@@ -11,4 +11,4 @@ const connectDB=async(url)=>{
     }
 }
 
-module.exports={connectDB};
+module.exports=connectDB;
