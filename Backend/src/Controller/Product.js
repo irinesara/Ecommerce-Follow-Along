@@ -1,10 +1,29 @@
 const {Router} = require('express');
 const Productmodel = require('../Model/ProductModel');
 const productrouter = Router();
- productrouter.get("/",(req,res)=>{
-        res.send("Product router");
+ productrouter.get("/get-product",async (req,res)=>{
+    try{
+        const productfind=await Productmodel.find();
+        const productimages = productfind.map((product)=>{
+            return{
+                name:product.name,
+                description:product.description,
+                category:product.category,
+                tags:product.tags,
+                price:product.price,
+                email:product.email,
+                stock:product.stock,
+                images:product.images,
+
+            }
+        });
+        res.status(200).json({products:products});
+    }
+    catch(err){
+        console.log(err)
+    }
     })
-    productrouter.post("/", productupload.array('files'), async (req, res) => {
+    productrouter.post("/post-product", productupload.array('files'), async (req, res) => {
         const { name, price, description, category, tags, stock, email } = req.body;
         const images = req.files.map(file => file.path);
         try{
