@@ -33,3 +33,11 @@ Shopping Cart: Enable users to add products to their cart and manage the cart's 
 Checkout Process: Implement a checkout process where users can enter shipping information and complete their purchase.
 Payment Integration: Integrate with a payment provider (e.g., Stripe or PayPal) to process payments securely.
 Admin Panel: Create an admin panel where administrators can manage products, orders, and users.
+
+
+
+Milestone 4
+
+Creating the User Model
+Creating the User Controller
+Setting up Multer for file uploads
