@@ -8,7 +8,7 @@ export const Productcard = ({image,name,price,description}) => {
 
   const {currentindex, setCurrentindex} = useState(0);
   useEffect(()=>{
-    setInterval(()=>{
+    const interval =setInterval(()=>{
       setCurrentindex((prev)=>(prev+1)%image.length);
 
     },2000)
