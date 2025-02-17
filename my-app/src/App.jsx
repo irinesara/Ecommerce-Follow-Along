@@ -3,7 +3,7 @@ import { Login } from './Components/Login';
 import { Signup } from './Components/Signup';
 import { Home } from './page/Home';
 import { Productform } from './Components/Productform';
-import { Productcardforseller } from './Component/productcardforseller'; 
+import { Productcardforseller } from './Components/productcardforseller'; 
 
 function App() {
   return (
@@ -14,6 +14,7 @@ function App() {
         <Route path="/Signup" element={<Signup />} />
         <Route path="/Productform" element={<Productform />} />
         <Route path="/my-product" element={<Productcardforseller />} /> 
+        <Route path="/product/:id" element={<Singlecard/>}/>
       </Routes>
     </>
   );
