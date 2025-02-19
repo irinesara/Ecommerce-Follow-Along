@@ -4,6 +4,8 @@ import { Signup } from './Components/Signup';
 import { Home } from './page/Home';
 import { Productform } from './Components/Productform';
 import { Productcardforseller } from './Components/productcardforseller'; 
+import { Singleproductpage } from './Components/Singleproductpage';
+import { Singlecard } from './Components/Singlecard';
 
 function App() {
   return (
@@ -15,6 +17,7 @@ function App() {
         <Route path="/Productform" element={<Productform />} />
         <Route path="/my-product" element={<Productcardforseller />} /> 
         <Route path="/product/:id" element={<Singlecard/>}/>
+        <Route path="/product/:id" element={<Singleproductpage/>}/>
       </Routes>
     </>
   );
