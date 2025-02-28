@@ -33,3 +33,5 @@ Shopping Cart: Enable users to add products to their cart and manage the cart's 
 Checkout Process: Implement a checkout process where users can enter shipping information and complete their purchase.
 Payment Integration: Integrate with a payment provider (e.g., Stripe or PayPal) to process payments securely.
 Admin Panel: Create an admin panel where administrators can manage products, orders, and users.
+
+Milestone 7: Project Overview It involves the creation of a secure login endpoint that facilitates user authentication. The process begins when the user submits their credentials, which can be either an email or a username along with a password. The backend then queries the database to find the corresponding user account. Once the account is found, the entered password is hashed using bcrypt, a secure hashing algorithm. This hashed password is then compared with the hashed version stored in the database. If the two hashes match, the user is authenticated and granted access. This approach ensures that sensitive data, such as passwords, are never stored or transmitted in plain text, providing a high level of security for user logins.
