@@ -33,3 +33,9 @@ Shopping Cart: Enable users to add products to their cart and manage the cart's 
 Checkout Process: Implement a checkout process where users can enter shipping information and complete their purchase.
 Payment Integration: Integrate with a payment provider (e.g., Stripe or PayPal) to process payments securely.
 Admin Panel: Create an admin panel where administrators can manage products, orders, and users.
+
+Milestone 10: Project Overview
+
+In this milestone, I focused on creating a product schema for storing product details in the database. This schema was defined in a new file, Productmodel.js, within the Model folder, using Mongoose for structure and validation. To handle the creation of new product entries, I implemented a POST request in a new file called Products.js, which allows product data to be stored in the database.
+
+Additionally, I integrated the Multer middleware for processing and handling image uploads associated with each product. This ensures that product images are correctly stored and linked to their respective product entries. I also made the necessary adjustments to the middleware folder and Index.js to ensure that the image upload functionality works as intended and that the overall flow of storing product data and images is seamless.
