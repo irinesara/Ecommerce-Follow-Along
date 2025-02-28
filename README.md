@@ -98,3 +98,9 @@ Updated the README file to reflect progress.
 
 Milestone 7: Project Overview
 It involves the creation of a secure login endpoint that facilitates user authentication. The process begins when the user submits their credentials, which can be either an email or a username along with a password. The backend then queries the database to find the corresponding user account. Once the account is found, the entered password is hashed using bcrypt, a secure hashing algorithm. This hashed password is then compared with the hashed version stored in the database. If the two hashes match, the user is authenticated and granted access. This approach ensures that sensitive data, such as passwords, are never stored or transmitted in plain text, providing a high level of security for user logins.
+
+Milestone 19
+Backend: In this milestone I added the endpoint for the put request from the frontend and then also did app.use(cors()). I also routed it in the controller as well as adding the logic for it.
+
+Frontend: I added the components cart.jsx and cartcomponent.jsx where I will render the frontend for cart page. I also used fetch request to get and display the products in the cart. I also added fetch request to put and update the changes made to the quantity of the page using the + and - icons on each product card.
+
