@@ -33,3 +33,16 @@ Shopping Cart: Enable users to add products to their cart and manage the cart's 
 Checkout Process: Implement a checkout process where users can enter shipping information and complete their purchase.
 Payment Integration: Integrate with a payment provider (e.g., Stripe or PayPal) to process payments securely.
 Admin Panel: Create an admin panel where administrators can manage products, orders, and users.
+
+
+Milestones 11 and 12: Project Overview
+
+In these milestones, we focused on bridging the gap between the frontend and the backend of the product form, successfully connecting it to MongoDB to manage and display product data.
+
+Milestone 11: The first part of this milestone involved updating Products.js to implement the GET route. This change allows the backend to query the MongoDB database, retrieve the product data, and pass it forward to Home.jsx on the frontend. The products are then dynamically displayed on the page, reflecting the current entries in the database.
+
+Milestone 12: In this phase, we initially planned to integrate Nodemailer for email functionality, but our mentor advised that it was unnecessary for this task, so it was omitted. Instead, we focused on modifying the POST route to handle the form submission. These changes ensure that when a new product is submitted via the frontend form, it is properly uploaded to the MongoDB database.
+
+Together, these milestones enabled the product form to interact with the backend, allowing users to view products stored in the database and add new ones via the form.
+
+
