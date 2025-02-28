@@ -6,6 +6,7 @@ import { Productform } from './Components/Productform';
 import { Productcardforseller } from './Components/productcardforseller'; 
 import { Singleproductpage } from './Components/Singleproductpage';
 import { Singlecard } from './Components/Singlecard';
+import Cart from './page/cart';
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
         <Route path="/my-product" element={<Productcardforseller />} /> 
         <Route path="/product/:id" element={<Singlecard/>}/>
         <Route path="/product/:id" element={<Singleproductpage/>}/>
+        <Route path='/cart'  element={<Cart/>}/>
       </Routes>
     </>
   );

@@ -3,8 +3,12 @@ const connectDB = require('./src/Database/db');
 const userrouter = require('./src/Controller/user');
 const { get } = require('mongoose');
 const productrouter = require('./src/Controller/Product');
+const cors = require('cors');
 
 const app=express();
+
+app.use(express.json());
+app.use(cors());
 
 require('dotenv').config({
     path:'./src/config/.env'
