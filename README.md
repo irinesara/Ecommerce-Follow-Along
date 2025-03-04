@@ -41,3 +41,8 @@ Frontend: I added the components cart.jsx and cartcomponent.jsx where I will ren
  
  Milestone 20 
 In Milestone 20, we focused on developing a system to fetch and display user profile data. First, we created the /profile API endpoint, which retrieves user details from the server and stores them in an object. Next, we built the Profile.jsx React component, which fetches the user data from the /profile endpoint and displays it in a clean, user-friendly format on the frontend. This milestone enables users to view their profile information directly in the application.
+
+
+Milestone 21
+This project is a simple React application that allows users to add their address details. The app consists of a Profile Page where users can view their profile information and a button to navigate to the Address Form Page. On the Address Form Page, users can input their street, city, state, and zip code, and upon submission, the entered address is logged to the console. The app uses React for the UI, React Router for navigation, and basic CSS for styling. To run the project locally, clone the repository, navigate to the project folder, run npm install to install dependencies, and then start the development server with npm start. Once the server is running, you can access the app at http://localhost:3000. Future enhancements could include storing address data in a backend, adding form validation, improving the user interface, and handling errors in form submission. This project is licensed under the MIT License.
+
