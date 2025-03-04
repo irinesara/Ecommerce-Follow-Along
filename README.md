@@ -33,3 +33,7 @@ Shopping Cart: Enable users to add products to their cart and manage the cart's 
 Checkout Process: Implement a checkout process where users can enter shipping information and complete their purchase.
 Payment Integration: Integrate with a payment provider (e.g., Stripe or PayPal) to process payments securely.
 Admin Panel: Create an admin panel where administrators can manage products, orders, and users.
+
+
+
+In Milestone 15, I created a new reusable Navbar component that renders across all pages of the application. The Navbar includes NavLinks for easy navigation to the Home, Product Form, Login, and Signup pages. To ensure a modern and responsive design, I styled the Navbar using Tailwind CSS. Additionally, I addressed and fixed various issues in home.jsx to improve its functionality. I also styled the productform.jsx page, which previously lacked any styling, to enhance its appearance and user experience. This milestone demonstrates a significant improvement in both the layout and user interface of the application.
