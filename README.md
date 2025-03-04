@@ -37,3 +37,6 @@ Admin Panel: Create an admin panel where administrators can manage products, ord
 
 
 In Milestone 15, I created a new reusable Navbar component that renders across all pages of the application. The Navbar includes NavLinks for easy navigation to the Home, Product Form, Login, and Signup pages. To ensure a modern and responsive design, I styled the Navbar using Tailwind CSS. Additionally, I addressed and fixed various issues in home.jsx to improve its functionality. I also styled the productform.jsx page, which previously lacked any styling, to enhance its appearance and user experience. This milestone demonstrates a significant improvement in both the layout and user interface of the application.
+
+Milestone 16
+Created singleproduct.jsx. The pages is made to show details about the product. I also routed it and made other minor changes.
