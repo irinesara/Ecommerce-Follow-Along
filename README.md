@@ -41,3 +41,7 @@ Frontend: I added the components cart.jsx and cartcomponent.jsx where I will ren
  
  Milestone 20 
 In Milestone 20, we focused on developing a system to fetch and display user profile data. First, we created the /profile API endpoint, which retrieves user details from the server and stores them in an object. Next, we built the Profile.jsx React component, which fetches the user data from the /profile endpoint and displays it in a clean, user-friendly format on the frontend. This milestone enables users to view their profile information directly in the application.
+
+
+Milestone 22
+Milestone 22 involves creating an endpoint that accepts an address from the frontend address form and adds it to the `address` array in the `user` collection in the backend. The backend will receive a `POST` request with the address data, validate it, and update the corresponding user's document. This will allow users to store multiple addresses in their profile. The frontend will send the address information via an API call, and the backend will respond with a success or error message depending on the operation outcome.
