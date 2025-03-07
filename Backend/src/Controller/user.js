@@ -14,7 +14,7 @@ userrouter.post("/create-user",upload.single("file"), async(req,res)=>{
     const {name, email, password} = req.body;
     const userEmail = await userModel.findOne({email});
     if (userEmail) {
-        return next(new ErrorHandler("User already exists", 400));
+        return res.status(400).json({message: "User already exists"});
       }
 
       const filename = req.file.filename ; 
@@ -46,7 +46,7 @@ userrouter.post("/login", async(req,res)=>{
         return res.status(400).json({message:"Invalid bcrypt compare"});
       }
       if(result){
-        jwt.sign({email:email},xyz,(err,token)=>{
+        jwt.sign({email:email}, secret, (err, token) => {
           if(err){
             return res.status(400).json({message:"Invalid jwt"});
           }
@@ -62,6 +62,7 @@ userrouter.post("/login", async(req,res)=>{
 
 userrouter.post('/add-address', async (req, res) => {
   try {
+    const email = req.user.email;
     const {
       country,
       city,
@@ -69,7 +70,6 @@ userrouter.post('/add-address', async (req, res) => {
       address2,
       zipCode,
       addressType,
-      email
     } = req.body;
     const user = await userModel.findOne({ email: email });
     const newaddress = {
@@ -82,11 +82,24 @@ userrouter.post('/add-address', async (req, res) => {
     };
     user.addresses.push(newaddress);
     await user.save();
-    res.status(200).json({ message: "Address added successfully" });
   } catch (err) {
     console.log("error in adding address", err);
     res.status(500).json({ message: "Error in adding address" });
   }
+  });
+  
+  userrouter.get('/get-address', async (req, res) => {
+    const {email}=req.user;
+    try{
+      const user=await userModel.findOne({email:email});
+      if(!user){
+        return res.status(400).json({message:"User not found"});
+      }
+      res.status(200).json({message:"successfully recieved",user:user.addresses});
+    }
+    catch(err){
+      console.log("error in getting address",err);
+    }
 });
 
 
