@@ -41,3 +41,11 @@ Frontend: I added the components cart.jsx and cartcomponent.jsx where I will ren
  
  Milestone 20 
 In Milestone 20, we focused on developing a system to fetch and display user profile data. First, we created the /profile API endpoint, which retrieves user details from the server and stores them in an object. Next, we built the Profile.jsx React component, which fetches the user data from the /profile endpoint and displays it in a clean, user-friendly format on the frontend. This milestone enables users to view their profile information directly in the application.
+
+Milestone 23
+Cart and Address Selection
+This implementation involves adding a "Place Order" button to the cart page, which, when clicked, navigates the user to the "Select Address" page. On the "Select Address" page, the user can view all their saved addresses and choose one. The backend needs an endpoint that retrieves all the user's saved addresses.
+
+On the frontend, the cart page will include a "Place Order" button, which triggers a navigation event to the select address page. The select address page will fetch the user's available addresses from the backend using a GET request to /api/get-addresses. These addresses will be displayed with radio buttons allowing the user to select one. Once an address is selected, the user can continue with the checkout process.
+
+For the backend, a simple GET endpoint /api/get-addresses will be implemented to return a list of addresses associated with the user. This will send the address data in JSON format, which will be used by the frontend to populate the available address options.
