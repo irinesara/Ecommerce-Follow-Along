@@ -49,3 +49,9 @@ This implementation involves adding a "Place Order" button to the cart page, whi
 On the frontend, the cart page will include a "Place Order" button, which triggers a navigation event to the select address page. The select address page will fetch the user's available addresses from the backend using a GET request to /api/get-addresses. These addresses will be displayed with radio buttons allowing the user to select one. Once an address is selected, the user can continue with the checkout process.
 
 For the backend, a simple GET endpoint /api/get-addresses will be implemented to return a list of addresses associated with the user. This will send the address data in JSON format, which will be used by the frontend to populate the available address options.
+
+Milstone 24 
+First we displayed all the products we are ordering
+Next we will display the address user selected to deliver
+We will display the total value of the cart
+We will have an place order button at the bottom.
