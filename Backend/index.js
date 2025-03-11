@@ -21,7 +21,7 @@ app.get('/',(req,res)=>{
     res.send('Hello World');
 })
 
-
+app.use('/order', orderrouter);
 app.use('/auth', userrouter);
 app.listen(PORT,async()=>{
 

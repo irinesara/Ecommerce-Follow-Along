@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { fetchUserProfile } from "../services/api";
+import CreateAddress from "../Components/Address";
 
 export default function Profile() {
   const [personalDetails, setPersonalDetails] = useState({});
@@ -81,7 +82,7 @@ export default function Profile() {
             </div>
           ) : (
             addresses.map((address, index) => (
-              <AddressCard key={index} {...address} />
+              <CreateAddress key={index} {...address} />
             ))
           )}
         </div>
