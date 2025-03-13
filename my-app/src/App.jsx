@@ -6,8 +6,12 @@ import { Productform } from './Components/Productform';
 import { Productcardforseller } from './Components/productcardforseller'; 
 import { Singleproductpage } from './Components/Singleproductpage';
 import { Singlecard } from './Components/Singlecard';
-import SelectAddress from './page/selectaddress';
-import Cart from './page/cart';
+import { CreateAddress } from './Components/CreateAddress';
+import { SelectAddress } from './page/selectaddress';
+import { Cart } from './page/cart';
+
+import { OrderConfirmation } from './page/Orderconformation';
+import { MyOrdersPage } from './page/Oderhistory';
 
 function App() {
   return (
@@ -22,6 +26,9 @@ function App() {
         <Route path="/product/:id" element={<Singleproductpage/>}/>
         <Route path='/cart'  element={<Cart/>}/>
         <Route path='/selectadress' element={<SelectAddress/>}/>
+        <Route path='/CreateAddress' element={<CreateAddress/>}/>
+        <Route path='/MyOrdersPage' element={<MyOrdersPage/>}/>
+        <Route path='/OrderConfirmation' element={<OrderConfirmation/>}/>
       </Routes>
     </>
   );
