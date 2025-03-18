@@ -64,7 +64,7 @@ orderRouter.get('/getorder',auth,async(req,res)=>{
     }
 })
 
-orderrouter.patch('/cancel-order/:orderId',async(req,res)=>{
+orderrouter.patch('/cancel-order/:orderId',auth,async(req,res)=>{
     try{
         const{orderId} = req.params;
         const order = await orders.findById(orderId);
