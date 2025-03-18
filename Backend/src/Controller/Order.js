@@ -1,6 +1,7 @@
 const {Router}=require('express')
 const { modelName } = require('../Model/OrderSchema')
 const auth = require('../Middleware/auth')
+const orders = require('../Model/OrderSchema')
 const orderrouter=Router()
 
 orderRouter.post('/place', auth, async(req,res,next)=>{
@@ -62,6 +63,26 @@ orderRouter.get('/getorder',auth,async(req,res)=>{
         console.log(err)
     }
 })
+
+orderrouter.patch('/cancel-order/:orderId',async(req,res)=>{
+    try{
+        const{orderId} = req.params;
+        const order = await orders.findById(orderId);
+        console.log(order);
+        if(!order){
+            return res.status(400).json({message:"Order not found"});
+        }
+        if(order.orderStatus ==['Delivered']){
+            res.status(404).json({message:"Order is already deliverd"});
+        }
+        order.orderStatus =['Cancelled'];
+        await order.save();
+        res.status(200).json({message:"Order cancelled successfully"});
+    }catch(error){
+        console.error("Error cancelling order",error);
+        res.status(500).json({message:error.message});
+    }
+});
 
 
 modelName.exports=orderrouter;
