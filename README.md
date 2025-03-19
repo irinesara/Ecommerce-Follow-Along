@@ -180,3 +180,13 @@ Created an API endpoint to receive user, product, and address details, retrieve 
 
 ## Milestone 26: Fetch User Orders Endpoint
 Built an API endpoint to fetch all orders of a user by retrieving their _id using their email and sending all associated orders in the response.
+
+# Milestone 27: My Orders Page
+We created a "My Orders" page for the frontend of the Ecommerce-Follow-Along project. This page displays all the orders placed by the user.
+
+# Milestone 28 - Cancel Order Feature
+Added a "Cancel Order" button in the My Orders page and created a backend endpoint to update order status to "Cancelled".  
+Users can cancel their orders unless they are already marked as "Cancelled".
+
+# Milestone 29: PayPal account
+I created a PayPal Developer account by logging into the PayPal Developer Dashboard. After logging in, I created a sandbox account and saved the UserID and Client ID. On the order confirmation page, I added two payment options using radio buttons: COD (Cash on Delivery) and Online Payment (PayPal). When the "Online Payment" option is selected, the PayPal button is displayed. In the next step, I will write the code to dynamically load and use the PayPal button for online payments.
