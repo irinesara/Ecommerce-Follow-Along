@@ -190,3 +190,12 @@ Users can cancel their orders unless they are already marked as "Cancelled".
 
 # Milestone 29: PayPal account
 I created a PayPal Developer account by logging into the PayPal Developer Dashboard. After logging in, I created a sandbox account and saved the UserID and Client ID. On the order confirmation page, I added two payment options using radio buttons: COD (Cash on Delivery) and Online Payment (PayPal). When the "Online Payment" option is selected, the PayPal button is displayed. In the next step, I will write the code to dynamically load and use the PayPal button for online payments.
+
+# Milestone 30 - Payment Options
+Implemented PayPal API for online payments. Installed react-paypal-js and integrated PayPalScriptProvider. Configured PayPal sandbox client ID for testing transactions. Added PayPal payment buttons in the order confirmation page.
+
+# Milestone 31 - Global State Management with Redux
+In this milestone, we implemented global state management using Redux in our Ecommerce-Follow-Along project. We installed react-redux, created a store folder, and added store.js and userActions.js files. The Redux store was configured to manage the user's email state globally. The setEmail function was created to update the global state, and the Provider component was used to wrap the App component in index.js.
+
+# Milestone 32 - Accessing Global State with Redux
+In this milestone, we integrated Redux to store and access the user's email across all pages. We used the dispatch method in the Login page to save the email in the global state. The useSelector hook was used to retrieve the stored email in other pages, enabling seamless access to user data. This milestone reinforced Redux state management concepts and improved global state handling in our project.
