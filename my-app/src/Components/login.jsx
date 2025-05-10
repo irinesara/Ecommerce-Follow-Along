@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import {AiOutlineEye, AiOutlineEyeInvisible} from 'react-icons/ai'
+
 export const Login = () => {
     const [email, setEmail] = useState('')
     const [password, setPassword] = useState('')
@@ -64,5 +65,5 @@ export const Login = () => {
             </div>
         </div>
     </div>
-   )
+  )
 }
